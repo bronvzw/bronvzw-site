@@ -1,4 +1,88 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'ananke'
+baseURL = "https://bronvzw.be/"
+title = "Bron vzw"
+theme = "ananke"
+
+# Multilingual
+defaultContentLanguage = "nl"
+defaultContentLanguageInSubdir = true
+
+[languages]
+
+  [languages.nl]
+    languageName = "Nederlands"
+    weight = 1
+    contentDir = "content/nl"
+    # Ananke options per language
+    [languages.nl.params]
+      mainSections = ["news"]
+      description = "Bron steunt de verkrachte en verstoten vrouwen van Walungu en hun kinderen."
+
+    [languages.nl.menu]
+      [[languages.nl.menu.main]]
+        name = "Homepagina"
+        url = "/"
+        weight = 1
+
+      [[languages.nl.menu.main]]
+        name = "Wat doen we"
+        url = "/wat-doen-we/"
+        weight = 2
+
+      [[languages.nl.menu.main]]
+        name = "Hoe kunt u ons helpen"
+        url = "/ons-steunen/"
+        weight = 3
+
+      [[languages.nl.menu.main]]
+        name = "Nieuws"
+        url = "/nieuws/"
+        weight = 4
+
+      [[languages.nl.menu.main]]
+        name = "Onze partners"
+        url = "/ons-steunen-1/"
+        weight = 5
+
+      [[languages.nl.menu.main]]
+        name = "Contact"
+        url = "/contact-2/"
+        weight = 6
+
+  [languages.fr]
+    languageName = "Français"
+    weight = 2
+    contentDir = "content/fr"
+    [languages.fr.params]
+      mainSections = ["news"]
+      description = "Bron soutient les femmes violées et rejetées de Walungu et leurs enfants."
+
+    [languages.fr.menu]
+      [[languages.fr.menu.main]]
+        name = "Accueil"
+        url = "/"
+        weight = 1
+
+      [[languages.fr.menu.main]]
+        name = "Que faisons-nous"
+        url = "/wat-doen-we/"
+        weight = 2
+
+      [[languages.fr.menu.main]]
+        name = "Comment nous soutenir"
+        url = "/ons-steunen/"
+        weight = 3
+
+      [[languages.fr.menu.main]]
+        name = "Nouvelles"
+        url = "/nieuws/"
+        weight = 4
+
+      [[languages.fr.menu.main]]
+        name = "Nos partenaires"
+        url = "/ons-steunen-1/"
+        weight = 5
+
+      [[languages.fr.menu.main]]
+        name = "Contact"
+        url = "/contact-2/"
+        weight = 6
