@@ -1,0 +1,372 @@
+{{ define "main" }}
+{{ $lang := .Language.Lang }}
+{{ $nl := eq $lang "nl" }}
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" aria-label="{{ if $nl }}Hero sectie{{ else }}Section héros{{ end }}">
+  <div class="hero-bg">
+    <img src="/images/mothers-children.jpg"
+         alt="{{ if $nl }}Moeders en kinderen in Walungu{{ else }}Mères et enfants à Walungu{{ end }}"
+         loading="eager">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        🌿 Walungu, Sud-Kivu · Congo
+      </div>
+      {{ if $nl }}
+      <h1>Elke moeder,<br>elk kind verdient hoop</h1>
+      <p class="hero-lead">
+        Bron vzw ondersteunt verkrachte en verstoten vrouwen van Walungu en hun kinderen
+        die geboren zijn uit verkrachting — door hen waardigheid, vaardigheden en onderwijs te bieden.
+      </p>
+      <div class="hero-actions">
+        <a href="/steunen/" class="btn btn-secondary">❤️ Steun ons</a>
+        <a href="/wat-doen-we/" class="btn btn-outline-white">Meer weten</a>
+      </div>
+      {{ else }}
+      <h1>Chaque mère,<br>chaque enfant mérite l'espoir</h1>
+      <p class="hero-lead">
+        Bron asbl soutient les femmes violées et rejetées de Walungu et leurs enfants
+        nés du viol — en leur offrant dignité, compétences et éducation.
+      </p>
+      <div class="hero-actions">
+        <a href="/fr/soutenir/" class="btn btn-secondary">❤️ Nous soutenir</a>
+        <a href="/fr/que-faisons-nous/" class="btn btn-outline-white">En savoir plus</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT / WHO WE ARE
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img src="/images/team-community.jpg"
+             alt="{{ if $nl }}Bron vzw vrijwilligers met de gemeenschap{{ else }}Bénévoles de Bron avec la communauté{{ end }}"
+             class="about-img">
+        <div class="about-img-badge">
+          <strong>2017</strong>
+          <span>{{ if $nl }}opgericht{{ else }}fondée{{ end }}</span>
+        </div>
+      </div>
+      <div class="about-text">
+        {{ if $nl }}
+        <span class="tag">Wie zijn we</span>
+        <h2>Vrijwilligers met een missie</h2>
+        <p>
+          Bron vzw is een vereniging van vrijwilligers in België, vastberaden om verkrachte en
+          verstoten vrouwen met hun kinderen — geboren uit verkrachting — uit de marge te halen
+          in Walungu, Zuid-Kivu, Oost-Congo.
+        </p>
+        <p>
+          Alles begon in 2016, tijdens een bezoek aan het dorp Walungu, 45 km van Bukavu,
+          toen een 7-jarige jongen genaamd Daniel om schoolinschrijving vroeg.
+          Hij was geboren uit verkrachting en zijn moeder had niemand om haar te helpen.
+          Uit die ontmoeting groeide Bron vzw.
+        </p>
+        <ul>
+          <li>Waardigheid en financiële onafhankelijkheid voor vrouwen</li>
+          <li>Scholing en toekomstperspectief voor kinderen</li>
+          <li>Ontmoetingsruimte en zeepfabriek in Walungu</li>
+          <li>Ondersteuning van immigrantenvrouwen in België</li>
+        </ul>
+        <br>
+        <a href="/wat-doen-we/" class="btn btn-outline">Lees meer over onze werking</a>
+        {{ else }}
+        <span class="tag">Qui sommes-nous</span>
+        <h2>Des bénévoles engagés</h2>
+        <p>
+          Bron asbl est une association de bénévoles en Belgique, déterminés à sortir de la
+          marginalisation les femmes violées et rejetées avec leurs enfants nés du viol
+          à Walungu, Sud-Kivu, Est-Congo.
+        </p>
+        <p>
+          Tout a commencé en 2016, lors d'une visite au village de Walungu, à 45 km de Bukavu,
+          quand un garçon de 7 ans nommé Daniel a demandé à être inscrit à l'école.
+          Né du viol, sa mère n'avait personne pour l'aider. De cette rencontre est née Bron asbl.
+        </p>
+        <ul>
+          <li>Dignité et indépendance financière pour les femmes</li>
+          <li>Scolarisation et avenir pour les enfants</li>
+          <li>Centre de rencontre et savonnerie à Walungu</li>
+          <li>Soutien aux femmes immigrantes en Belgique</li>
+        </ul>
+        <br>
+        <a href="/fr/que-faisons-nous/" class="btn btn-outline">En savoir plus sur nos actions</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MISSION PILLARS
+     ============================================================ -->
+<section class="section section--pale">
+  <div class="container text-center">
+    {{ if $nl }}
+    <span class="tag">Onze werking</span>
+    <h2 class="section-title">Drie pijlers van onze missie</h2>
+    <p class="section-lead">
+      In Walungu en in België zetten we ons in op drie vlakken om structurele verandering te brengen.
+    </p>
+    {{ else }}
+    <span class="tag">Notre action</span>
+    <h2 class="section-title">Trois piliers de notre mission</h2>
+    <p class="section-lead">
+      À Walungu et en Belgique, nous agissons sur trois plans pour apporter un changement durable.
+    </p>
+    {{ end }}
+
+    <div class="pillars-grid">
+      <!-- Pillar 1: Women -->
+      <article class="pillar-card">
+        <img src="/images/mothers-children-2.jpg"
+             alt="{{ if $nl }}Vrouwen in Walungu{{ else }}Femmes à Walungu{{ end }}"
+             class="pillar-img"
+             onerror="this.parentElement.querySelector('.pillar-img-placeholder').style.display='flex'; this.style.display='none'">
+        <div class="pillar-img-placeholder" style="display:none">🌸</div>
+        <div class="pillar-body">
+          <div class="pillar-icon">🌸</div>
+          {{ if $nl }}
+          <h3>Vrouwen</h3>
+          <p>
+            We steunen verkrachte en verstoten vrouwen door hen te begeleiden naar
+            financiële onafhankelijkheid via beroepsopleidingen en zeepproductie.
+          </p>
+          {{ else }}
+          <h3>Femmes</h3>
+          <p>
+            Nous soutenons les femmes violées et rejetées en les guidant vers
+            l'indépendance financière grâce à des formations professionnelles et la production de savon.
+          </p>
+          {{ end }}
+        </div>
+      </article>
+
+      <!-- Pillar 2: Children -->
+      <article class="pillar-card">
+        <img src="/images/children-eating.jpg"
+             alt="{{ if $nl }}Kinderen in Walungu{{ else }}Enfants à Walungu{{ end }}"
+             class="pillar-img"
+             onerror="this.parentElement.querySelector('.pillar-img-placeholder').style.display='flex'; this.style.display='none'">
+        <div class="pillar-img-placeholder" style="display:none">📚</div>
+        <div class="pillar-body">
+          <div class="pillar-icon">📚</div>
+          {{ if $nl }}
+          <h3>Kinderen</h3>
+          <p>
+            We betalen schoolgeld, kopen schoolmateriaal en uniformen, en zorgen voor
+            warme maaltijden voor kinderen die geboren zijn uit verkrachting.
+          </p>
+          {{ else }}
+          <h3>Enfants</h3>
+          <p>
+            Nous payons les frais scolaires, achetons le matériel et les uniformes, et offrons
+            des repas chauds aux enfants nés du viol.
+          </p>
+          {{ end }}
+        </div>
+      </article>
+
+      <!-- Pillar 3: Community -->
+      <article class="pillar-card">
+        <img src="/images/meeting-center.jpg"
+             alt="{{ if $nl }}Ontmoetingsruimte in Walungu{{ else }}Centre de rencontre à Walungu{{ end }}"
+             class="pillar-img"
+             onerror="this.parentElement.querySelector('.pillar-img-placeholder').style.display='flex'; this.style.display='none'">
+        <div class="pillar-img-placeholder" style="display:none">🏗️</div>
+        <div class="pillar-body">
+          <div class="pillar-icon">🏗️</div>
+          {{ if $nl }}
+          <h3>Gemeenschap</h3>
+          <p>
+            We bouwen een ontmoetingsruimte en artisanale zeepfabriek in Walungu —
+            een plek voor solidariteit, opleiding en zelfontplooiing.
+          </p>
+          {{ else }}
+          <h3>Communauté</h3>
+          <p>
+            Nous construisons un centre de rencontre et une savonnerie artisanale à Walungu —
+            un lieu de solidarité, de formation et d'épanouissement.
+          </p>
+          {{ end }}
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     IMPACT STATS
+     ============================================================ -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">20<span>+</span></div>
+        <div class="stat-label">{{ if $nl }}kinderen begeleid 2024–2025{{ else }}enfants accompagnés 2024–2025{{ end }}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2017</div>
+        <div class="stat-label">{{ if $nl }}opgericht als vzw{{ else }}fondée en asbl{{ end }}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">€<span>80</span></div>
+        <div class="stat-label">{{ if $nl }}= schooljaar voor één kind{{ else }}= une année scolaire pour un enfant{{ end }}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5</div>
+        <div class="stat-label">{{ if $nl }}partnerorganisaties{{ else }}organisations partenaires{{ end }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     LATEST NEWS
+     ============================================================ -->
+{{ $newsSection := cond $nl "nieuws" "nouvelles" }}
+{{ $newsPages := .Site.GetPage $newsSection }}
+{{ if $newsPages }}
+{{ $recentPosts := first 3 $newsPages.Pages }}
+{{ if $recentPosts }}
+<section class="section">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:var(--sp-lg);">
+      <div>
+        {{ if $nl }}
+        <span class="tag">Laatste nieuws</span>
+        <h2 class="section-title">Nieuws uit Walungu & België</h2>
+        {{ else }}
+        <span class="tag">Dernières nouvelles</span>
+        <h2 class="section-title">Nouvelles de Walungu & Belgique</h2>
+        {{ end }}
+      </div>
+      <a href="{{ if $nl }}/nieuws/{{ else }}/fr/nouvelles/{{ end }}" class="btn btn-outline btn-sm">
+        {{ if $nl }}Alle nieuws{{ else }}Toutes les nouvelles{{ end }}
+      </a>
+    </div>
+
+    <div class="news-grid">
+      {{ range $recentPosts }}
+      <article class="news-card">
+        {{ if .Params.image }}
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="news-card-img"
+             onerror="this.parentElement.querySelector('.news-card-img-placeholder').style.display='flex'; this.style.display='none'">
+        {{ end }}
+        <div class="news-card-img-placeholder" {{ if .Params.image }}style="display:none"{{ end }}>📰</div>
+        <div class="news-card-body">
+          <div class="news-card-date">{{ .Date.Format "2 Jan 2006" }}</div>
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
+          <a href="{{ .Permalink }}" class="btn btn-outline btn-sm">
+            {{ if $nl }}Lees meer{{ else }}Lire la suite{{ end }}
+          </a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+<!-- ============================================================
+     DONATE CTA
+     ============================================================ -->
+<section class="cta-donate">
+  <div class="container">
+    {{ if $nl }}
+    <h2>Help ons het verschil maken</h2>
+    <p>
+      Met een gift van €80 betaal je een volledig schooljaar voor één kind,
+      of help je een moeder starten met een economische activiteit.
+      Giften vanaf €40 zijn fiscaal aftrekbaar via onze partner Kontinenten vzw.
+    </p>
+    <div class="cta-actions">
+      <a href="/steunen/" class="btn btn-secondary">❤️ Schenk nu</a>
+      <a href="/contact/" class="btn btn-outline-white">Contacteer ons</a>
+    </div>
+    {{ else }}
+    <h2>Aidez-nous à faire la différence</h2>
+    <p>
+      Avec un don de 80 €, vous financez une année scolaire complète pour un enfant,
+      ou aidez une mère à démarrer une activité économique.
+      Les dons à partir de 40 € sont déductibles fiscalement via notre partenaire Kontinenten asbl.
+    </p>
+    <div class="cta-actions">
+      <a href="/fr/soutenir/" class="btn btn-secondary">❤️ Faire un don</a>
+      <a href="/fr/contact/" class="btn btn-outline-white">Nous contacter</a>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- ============================================================
+     TEAM
+     ============================================================ -->
+<section class="section section--pale">
+  <div class="container text-center">
+    {{ if $nl }}
+    <span class="tag">Ons team</span>
+    <h2 class="section-title">De mensen achter Bron vzw</h2>
+    <p class="section-lead">Een toegewijd team van vrijwilligers in België en Congo.</p>
+    {{ else }}
+    <span class="tag">Notre équipe</span>
+    <h2 class="section-title">Les personnes derrière Bron asbl</h2>
+    <p class="section-lead">Une équipe dévouée de bénévoles en Belgique et au Congo.</p>
+    {{ end }}
+
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="/images/team-marie-valence.jpg" alt="Marie-Valence Mita Yimindu" class="team-avatar"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="team-avatar-placeholder" style="display:none">👤</div>
+        <h4>Marie-Valence Mita Yimindu</h4>
+        <p>{{ if $nl }}Secretariaat{{ else }}Secrétariat{{ end }}</p>
+      </div>
+      <div class="team-card">
+        <img src="/images/team-juliette.jpg" alt="Juliette Binyungu" class="team-avatar"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="team-avatar-placeholder" style="display:none">👤</div>
+        <h4>Juliette Binyungu</h4>
+        <p>{{ if $nl }}Coördinatie & PR{{ else }}Coordination & RP{{ end }}</p>
+      </div>
+      <div class="team-card">
+        <img src="/images/team-albert.jpg" alt="Albert Malekera" class="team-avatar"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="team-avatar-placeholder" style="display:none">👤</div>
+        <h4>Albert Malekera</h4>
+        <p>{{ if $nl }}Projectleider Congo{{ else }}Chef de projet Congo{{ end }}</p>
+      </div>
+      <div class="team-card">
+        <img src="/images/team-armelle.jpg" alt="Armelle Griffon" class="team-avatar"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="team-avatar-placeholder" style="display:none">👤</div>
+        <h4>Armelle Griffon</h4>
+        <p>{{ if $nl }}Penningmeester{{ else }}Trésorière{{ end }}</p>
+      </div>
+      <div class="team-card">
+        <img src="/images/team-erik.jpg" alt="Erik" class="team-avatar"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="team-avatar-placeholder" style="display:none">👤</div>
+        <h4>Erik</h4>
+        <p>{{ if $nl }}Projectleider België{{ else }}Chef de projet Belgique{{ end }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

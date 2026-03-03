@@ -1,0 +1,198 @@
+{{ $nl := eq .Language.Lang "nl" }}
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    {{ if $nl }}
+    <span class="tag">Schenken</span>
+    <h1>Hoe kunt u ons helpen?</h1>
+    <p class="page-hero-lead">
+      Met een gift — groot of klein — helpt u een kind naar school of een moeder
+      een nieuw begin te maken. Elke bijdrage telt.
+    </p>
+    {{ else }}
+    <span class="tag">Faire un don</span>
+    <h1>Comment nous soutenir&nbsp;?</h1>
+    <p class="page-hero-lead">
+      Avec un don — grand ou petit — vous aidez un enfant à aller à l'école
+      ou une mère à prendre un nouveau départ. Chaque contribution compte.
+    </p>
+    {{ end }}
+  </div>
+</div>
+
+<!-- IMPACT NUMBERS -->
+<section class="section">
+  <div class="container">
+    {{ if $nl }}
+    <span class="tag">Impact van uw gift</span>
+    <h2 class="section-title">Wat uw bijdrage betekent</h2>
+    {{ else }}
+    <span class="tag">Impact de votre don</span>
+    <h2 class="section-title">Ce que votre contribution signifie</h2>
+    {{ end }}
+
+    <div class="impact-row">
+      <div class="impact-item">
+        <div class="impact-emoji">🎒</div>
+        <div>
+          <h4>€ 80</h4>
+          <p>{{ if $nl }}
+            betaalt een volledig schooljaar (schoolgeld, materiaal, uniform) voor één kind.
+          {{ else }}
+            paie une année scolaire complète (frais, matériel, uniforme) pour un enfant.
+          {{ end }}</p>
+        </div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-emoji">🐷</div>
+        <div>
+          <h4>€ 80</h4>
+          <p>{{ if $nl }}
+            geeft een moeder de kans te starten met een economische activiteit, zoals varkenshouderij.
+          {{ else }}
+            permet à une mère de démarrer une activité économique, comme l'élevage de porcs.
+          {{ end }}</p>
+        </div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-emoji">🍚</div>
+        <div>
+          <h4>€ 10</h4>
+          <p>{{ if $nl }}
+            zorgt voor warme maaltijden voor meerdere kinderen tijdens schooldagen.
+          {{ else }}
+            assure des repas chauds pour plusieurs enfants durant les jours d'école.
+          {{ end }}</p>
+        </div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-emoji">🏫</div>
+        <div>
+          <h4>€ 40+</h4>
+          <p>{{ if $nl }}
+            is fiscaal aftrekbaar via onze partner Kontinenten vzw. Automatisch verwerkt in uw belastingaangifte.
+          {{ else }}
+            est déductible fiscalement via notre partenaire Kontinenten asbl. Traitement automatique dans votre déclaration.
+          {{ end }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATION OPTIONS -->
+<section class="section section--pale">
+  <div class="container">
+    {{ if $nl }}
+    <span class="tag">Schenkingsopties</span>
+    <h2 class="section-title">Zo kunt u schenken</h2>
+    {{ else }}
+    <span class="tag">Options de don</span>
+    <h2 class="section-title">Comment faire un don</h2>
+    {{ end }}
+
+    <div class="donate-grid">
+
+      <!-- Option 1: Tax deductible -->
+      <div class="donate-card featured">
+        {{ if $nl }}
+        <div class="donate-amount">€ 40+</div>
+        <h3>Fiscaal aftrekbaar</h3>
+        <p>
+          Jaarlijkse gift van minstens €40 via onze partner
+          <strong>Kontinenten vzw</strong>. Elke euro wordt volledig doorgestort
+          naar Bron vzw. U ontvangt automatisch een fiscaal attest.
+        </p>
+        <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--c-text-mid);">
+          Vermeld bij de storting:<br>
+          <em>"Projet BRON asbl – Congo – [rijksregisternummer] + [voornaam] + [achternaam]"</em>
+        </p>
+        <div class="bank-box">
+          <p style="font-size:0.8rem; font-weight:600; color:var(--c-text-mid); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.05em;">Kontinenten vzw</p>
+          <div class="bank-row"><span class="bank-lbl">IBAN</span><span class="bank-val">BE66 7380 3734 7143</span></div>
+          <div class="bank-row"><span class="bank-lbl">BIC</span><span class="bank-val">KREDBEBB</span></div>
+          <div class="bank-row" style="margin-top:0.5rem;"><span style="font-size:0.78rem; color:var(--c-text-mid);">Potterierei 72, 8000 Brugge</span></div>
+        </div>
+        {{ else }}
+        <div class="donate-amount">€ 40+</div>
+        <h3>Déductible fiscalement</h3>
+        <p>
+          Don annuel d'au moins 40 € via notre partenaire
+          <strong>Kontinenten asbl</strong>. Chaque euro est intégralement reversé
+          à Bron asbl. Vous recevez automatiquement une attestation fiscale.
+        </p>
+        <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--c-text-mid);">
+          Indiquer en communication :<br>
+          <em>"Projet BRON asbl – Congo – [numéro de registre national] + [prénom] + [nom]"</em>
+        </p>
+        <div class="bank-box">
+          <p style="font-size:0.8rem; font-weight:600; color:var(--c-text-mid); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.05em;">Kontinenten asbl</p>
+          <div class="bank-row"><span class="bank-lbl">IBAN</span><span class="bank-val">BE66 7380 3734 7143</span></div>
+          <div class="bank-row"><span class="bank-lbl">BIC</span><span class="bank-val">KREDBEBB</span></div>
+          <div class="bank-row" style="margin-top:0.5rem;"><span style="font-size:0.78rem; color:var(--c-text-mid);">Potterierei 72, 8000 Bruges</span></div>
+        </div>
+        {{ end }}
+      </div>
+
+      <!-- Option 2: Direct donation -->
+      <div class="donate-card">
+        {{ if $nl }}
+        <div class="donate-amount">Elk bedrag</div>
+        <h3>Rechtstreeks aan Bron vzw</h3>
+        <p>
+          U kunt ook rechtstreeks storten op de rekening van Bron vzw.
+          Giften onder €40 per jaar zijn niet fiscaal aftrekbaar,
+          maar worden even graag ontvangen.
+        </p>
+        <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--c-text-mid);">
+          U kunt ook een testament of legaat opnemen ten gunste van Bron vzw.
+          Neem contact op voor meer informatie.
+        </p>
+        <div class="bank-box">
+          <p style="font-size:0.8rem; font-weight:600; color:var(--c-text-mid); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.05em;">Bron vzw</p>
+          <div class="bank-row"><span class="bank-lbl">IBAN</span><span class="bank-val">{{ .Site.Params.iban }}</span></div>
+          <div class="bank-row"><span class="bank-lbl">BIC</span><span class="bank-val">{{ .Site.Params.bic }}</span></div>
+        </div>
+        {{ else }}
+        <div class="donate-amount">Tout montant</div>
+        <h3>Directement à Bron asbl</h3>
+        <p>
+          Vous pouvez aussi verser directement sur le compte de Bron asbl.
+          Les dons inférieurs à 40 € par an ne sont pas déductibles fiscalement,
+          mais sont tout aussi appréciés.
+        </p>
+        <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--c-text-mid);">
+          Vous pouvez également inclure un testament ou legs en faveur de Bron asbl.
+          Contactez-nous pour plus d'informations.
+        </p>
+        <div class="bank-box">
+          <p style="font-size:0.8rem; font-weight:600; color:var(--c-text-mid); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.05em;">Bron asbl</p>
+          <div class="bank-row"><span class="bank-lbl">IBAN</span><span class="bank-val">{{ .Site.Params.iban }}</span></div>
+          <div class="bank-row"><span class="bank-lbl">BIC</span><span class="bank-val">{{ .Site.Params.bic }}</span></div>
+        </div>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-donate">
+  <div class="container">
+    {{ if $nl }}
+    <h2>Samen maken we het verschil</h2>
+    <p>Heeft u vragen over schenken of wilt u anders samenwerken? Neem gerust contact op.</p>
+    <div class="cta-actions">
+      <a href="/contact/" class="btn btn-outline-white">Contacteer ons</a>
+    </div>
+    {{ else }}
+    <h2>Ensemble, nous faisons la différence</h2>
+    <p>Vous avez des questions sur les dons ou souhaitez collaborer autrement ? N'hésitez pas à nous contacter.</p>
+    <div class="cta-actions">
+      <a href="/fr/contact/" class="btn btn-outline-white">Nous contacter</a>
+    </div>
+    {{ end }}
+  </div>
+</section>

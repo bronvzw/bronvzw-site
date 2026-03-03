@@ -1,0 +1,63 @@
+{{ $lang := .Language.Lang }}
+{{ $currentURL := .RelPermalink }}
+
+<nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="{{ if eq $lang "nl" }}/{{ else }}/fr/{{ end }}" class="nav-logo">
+        <img src="/images/logo.png" alt="Bron vzw logo" class="nav-logo-img"
+             onerror="this.style.display='none'">
+        <span class="nav-logo-text">Bron vzw</span>
+      </a>
+
+      <!-- Navigation links -->
+      <ul class="nav-links" role="list">
+        {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}"
+             {{ if eq $currentURL .URL }}class="active" aria-current="page"{{ end }}>
+            {{ .Name }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+
+      <!-- Right side: lang switcher + mobile toggle -->
+      <div class="nav-right">
+        <!-- Language switcher -->
+        <div class="nav-lang" aria-label="Taal / Langue">
+          {{ if eq $lang "nl" }}
+            <span class="lang-active" title="Nederlands">NL</span>
+            <span class="nav-lang-sep">|</span>
+            {{ if .Translations }}
+              <a href="{{ (index .Translations 0).Permalink }}" title="Français">FR</a>
+            {{ else }}
+              <a href="/fr/" title="Français">FR</a>
+            {{ end }}
+          {{ else }}
+            {{ if .Translations }}
+              <a href="{{ (index .Translations 0).Permalink }}" title="Nederlands">NL</a>
+            {{ else }}
+              <a href="/" title="Nederlands">NL</a>
+            {{ end }}
+            <span class="nav-lang-sep">|</span>
+            <span class="lang-active" title="Français">FR</span>
+          {{ end }}
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button class="nav-toggle" id="nav-toggle"
+                aria-label="{{ if eq $lang "nl" }}Menu openen{{ else }}Ouvrir le menu{{ end }}"
+                aria-expanded="false"
+                aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>

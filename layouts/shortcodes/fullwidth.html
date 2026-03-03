@@ -1,0 +1,17 @@
+<div style="
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+
+  background-color: {{ .Get "bg" | default "#0f2d0f" }};
+  padding: {{ .Get "padding" | default "4rem 1rem" }};
+  text-align: center;
+  color: {{ .Get "color" | default "#e87518" }};
+  font-size: {{ .Get "size" | default "2.5rem" }};
+  font-weight: bold;
+">
+  {{ .Inner | safeHTML }}
+</div>

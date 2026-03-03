@@ -1,0 +1,49 @@
+{{ define "main" }}
+{{ $nl := eq .Language.Lang "nl" }}
+
+<div class="news-list-header">
+  <div class="container">
+    {{ if $nl }}
+    <span class="tag">Bron vzw</span>
+    <h1>Nieuws</h1>
+    <p class="page-hero-lead">Laatste updates uit Walungu en België.</p>
+    {{ else }}
+    <span class="tag">Bron asbl</span>
+    <h1>Nouvelles</h1>
+    <p class="page-hero-lead">Dernières nouvelles de Walungu et de Belgique.</p>
+    {{ end }}
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    {{ if .Pages }}
+    <div class="news-list-grid">
+      {{ range .Pages.ByDate.Reverse }}
+      <article class="news-list-card">
+        {{ if .Params.image }}
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="news-list-card-img"
+             onerror="this.parentElement.querySelector('.news-list-card-img-placeholder').style.display='flex'; this.style.display='none'">
+        {{ end }}
+        <div class="news-list-card-img-placeholder" {{ if .Params.image }}style="display:none"{{ end }}>📰</div>
+        <div class="news-list-card-body">
+          <div class="news-card-date">{{ .Date.Format "2 January 2006" }}</div>
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
+          <a href="{{ .Permalink }}" class="btn btn-outline btn-sm">
+            {{ if $nl }}Lees meer{{ else }}Lire la suite{{ end }}
+          </a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    {{ else }}
+    <div style="text-align:center; padding:var(--sp-xl) 0; color:var(--c-text-mid);">
+      <div style="font-size:3rem; margin-bottom:1rem;">📰</div>
+      <p>{{ if $nl }}Er zijn nog geen nieuwsberichten. Kom binnenkort terug!{{ else }}Pas encore d'articles. Revenez bientôt !{{ end }}</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

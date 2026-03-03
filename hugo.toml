@@ -1,88 +1,88 @@
-baseURL = "https://bronvzw.be/"
+baseURL = "https://vzwbron.be/"
 title = "Bron vzw"
-theme = "ananke"
-
-# Multilingual
 defaultContentLanguage = "nl"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+summaryLength = 60
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  phone = "+32 474 674 911"
+  email = "bron.vzw@gmail.com"
+  address = "Kouterstraat (LOO) 23, 3040 Huldenberg"
+  iban = "BE38 0004 4841 8872"
+  bic = "BPOTBEB1"
+  iban_kontinenten = "BE66 7380 3734 7143"
+  bic_kontinenten = "KREDBEBB"
 
 [languages]
 
   [languages.nl]
+    contentDir = "content/nl"
     languageName = "Nederlands"
     weight = 1
-    contentDir = "content/nl"
-    # Ananke options per language
+    title = "Bron vzw"
     [languages.nl.params]
-      mainSections = ["news"]
-      description = "Bron steunt de verkrachte en verstoten vrouwen van Walungu en hun kinderen."
-
-    [languages.nl.menu]
-      [[languages.nl.menu.main]]
-        name = "Homepagina"
-        url = "/"
-        weight = 1
-
-      [[languages.nl.menu.main]]
-        name = "Wat doen we"
-        url = "/wat-doen-we/"
-        weight = 2
-
-      [[languages.nl.menu.main]]
-        name = "Hoe kunt u ons helpen"
-        url = "/ons-steunen/"
-        weight = 3
-
-      [[languages.nl.menu.main]]
-        name = "Nieuws"
-        url = "/nieuws/"
-        weight = 4
-
-      [[languages.nl.menu.main]]
-        name = "Onze partners"
-        url = "/ons-steunen-1/"
-        weight = 5
-
-      [[languages.nl.menu.main]]
-        name = "Contact"
-        url = "/contact-2/"
-        weight = 6
+      description = "Bron vzw ondersteunt verkrachte en verstoten vrouwen van Walungu en hun kinderen."
+      tagline = "Onze ambitie is ervoor te zorgen dat geen enkele moeder en geen enkel kind aan hun lot worden overgelaten."
+    [[languages.nl.menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 1
+    [[languages.nl.menu.main]]
+      name = "Wat doen we"
+      url = "/wat-doen-we/"
+      weight = 2
+    [[languages.nl.menu.main]]
+      name = "Ons steunen"
+      url = "/steunen/"
+      weight = 3
+    [[languages.nl.menu.main]]
+      name = "Nieuws"
+      url = "/nieuws/"
+      weight = 4
+    [[languages.nl.menu.main]]
+      name = "Onze partners"
+      url = "/partners/"
+      weight = 5
+    [[languages.nl.menu.main]]
+      name = "Contact"
+      url = "/contact/"
+      weight = 6
 
   [languages.fr]
+    contentDir = "content/fr"
     languageName = "Français"
     weight = 2
-    contentDir = "content/fr"
+    title = "Bron asbl"
     [languages.fr.params]
-      mainSections = ["news"]
-      description = "Bron soutient les femmes violées et rejetées de Walungu et leurs enfants."
-
-    [languages.fr.menu]
-      [[languages.fr.menu.main]]
-        name = "Accueil"
-        url = "/"
-        weight = 1
-
-      [[languages.fr.menu.main]]
-        name = "Que faisons-nous"
-        url = "/wat-doen-we/"
-        weight = 2
-
-      [[languages.fr.menu.main]]
-        name = "Comment nous soutenir"
-        url = "/ons-steunen/"
-        weight = 3
-
-      [[languages.fr.menu.main]]
-        name = "Nouvelles"
-        url = "/nieuws/"
-        weight = 4
-
-      [[languages.fr.menu.main]]
-        name = "Nos partenaires"
-        url = "/ons-steunen-1/"
-        weight = 5
-
-      [[languages.fr.menu.main]]
-        name = "Contact"
-        url = "/contact-2/"
-        weight = 6
+      description = "Bron asbl soutient les femmes violées et rejetées de Walungu et leurs enfants."
+      tagline = "Notre ultime souhait est qu'aucune femme violée et aucun enfant né d'un viol ne soient abandonnés."
+    [[languages.fr.menu.main]]
+      name = "Accueil"
+      url = "/fr/"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Que faisons-nous"
+      url = "/fr/que-faisons-nous/"
+      weight = 2
+    [[languages.fr.menu.main]]
+      name = "Nous soutenir"
+      url = "/fr/soutenir/"
+      weight = 3
+    [[languages.fr.menu.main]]
+      name = "Nouvelles"
+      url = "/fr/nouvelles/"
+      weight = 4
+    [[languages.fr.menu.main]]
+      name = "Nos partenaires"
+      url = "/fr/partenaires/"
+      weight = 5
+    [[languages.fr.menu.main]]
+      name = "Contact"
+      url = "/fr/contact/"
+      weight = 6

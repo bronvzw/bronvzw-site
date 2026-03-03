@@ -1,0 +1,112 @@
+{{ $nl := eq .Language.Lang "nl" }}
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    {{ if $nl }}
+    <span class="tag">Samenwerking</span>
+    <h1>Onze partners</h1>
+    <p class="page-hero-lead">
+      Bron vzw werkt samen met lokale en Belgische organisaties om
+      haar missie kracht bij te zetten.
+    </p>
+    {{ else }}
+    <span class="tag">Collaboration</span>
+    <h1>Nos partenaires</h1>
+    <p class="page-hero-lead">
+      Bron asbl collabore avec des organisations locales et belges pour
+      renforcer sa mission.
+    </p>
+    {{ end }}
+  </div>
+</div>
+
+<!-- PARTNERS: SOUTH KIVU -->
+<section class="section">
+  <div class="container">
+    <div class="partners-group">
+      <h2 class="partners-group-title">
+        🇨🇩 {{ if $nl }}Partners in Zuid-Kivu, Congo{{ else }}Partenaires au Sud-Kivu, Congo{{ end }}
+      </h2>
+      <div class="partners-grid">
+        <div class="partner-card">
+          <div class="partner-emoji">🏫</div>
+          <h4>{{ if $nl }}Basisschool Chagala{{ else }}École primaire Chagala{{ end }}</h4>
+          <p>Walungu</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-emoji">🏫</div>
+          <h4>{{ if $nl }}Basisschool Kanyamulande{{ else }}École primaire Kanyamulande{{ end }}</h4>
+          <p>Walungu</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-emoji">🏫</div>
+          <h4>{{ if $nl }}Basisschool Walungu Centrum{{ else }}École primaire Centre de Walungu{{ end }}</h4>
+          <p>Walungu</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-emoji">📻</div>
+          <h4>Radio Mulangane</h4>
+          <p>{{ if $nl }}Lokale radio{{ else }}Radio locale{{ end }}</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-emoji">🏥</div>
+          <h4>{{ if $nl }}Algemeen Ziekenhuis van Walungu{{ else }}Hôpital Général de Walungu{{ end }}</h4>
+          <p>{{ if $nl }}Gezondheidszorg{{ else }}Soins de santé{{ end }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTNERS: BELGIUM -->
+    <div class="partners-group">
+      <h2 class="partners-group-title">
+        🇧🇪 {{ if $nl }}Partners in België{{ else }}Partenaires en Belgique{{ end }}
+      </h2>
+      <div class="partners-grid">
+        <div class="partner-card">
+          <div class="partner-emoji">🤝</div>
+          <h4>4de Pijler</h4>
+          <p>{{ if $nl }}Burgerinitiatieven voor Ontwikkeling{{ else }}Initiatives citoyennes pour le développement{{ end }}</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-emoji">💰</div>
+          <h4>Kontinenten vzw</h4>
+          <p>{{ if $nl }}Fiscale attesten voor giften{{ else }}Attestations fiscales pour dons{{ end }}</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-emoji">🌍</div>
+          <h4>Ekimanyelo</h4>
+          <p>{{ if $nl }}Partnerorganisatie{{ else }}Organisation partenaire{{ end }}</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-emoji">👩</div>
+          <h4>Association Femmes d'Europe</h4>
+          <p>{{ if $nl }}Vrouwenrechten{{ else }}Droits des femmes{{ end }}</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-emoji">🌱</div>
+          <h4>VZW AIF</h4>
+          <p>{{ if $nl }}Partnerorganisatie{{ else }}Organisation partenaire{{ end }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BECOME A PARTNER -->
+    <div style="background:var(--c-primary-pale); border-radius:var(--r-lg); padding:var(--sp-lg); text-align:center; margin-top:var(--sp-xl);">
+      {{ if $nl }}
+      <h3>Word ook een partner</h3>
+      <p style="color:var(--c-text-mid); max-width:500px; margin:0 auto 1.5rem;">
+        Wil uw organisatie samenwerken met Bron vzw? We staan open voor nieuwe partnerschappen.
+      </p>
+      <a href="/contact/" class="btn btn-primary">Neem contact op</a>
+      {{ else }}
+      <h3>Devenez partenaire</h3>
+      <p style="color:var(--c-text-mid); max-width:500px; margin:0 auto 1.5rem;">
+        Votre organisation souhaite collaborer avec Bron asbl ? Nous sommes ouverts à de nouveaux partenariats.
+      </p>
+      <a href="/fr/contact/" class="btn btn-primary">Nous contacter</a>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

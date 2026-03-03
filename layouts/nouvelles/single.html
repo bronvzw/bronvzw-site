@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $nl := eq .Language.Lang "nl" }}
+
+<div class="article-wrap">
+  <div class="container">
+    <div class="article-back">
+      <a href="{{ if $nl }}/nieuws/{{ else }}/fr/nouvelles/{{ end }}">
+        ← {{ if $nl }}Terug naar nieuws{{ else }}Retour aux nouvelles{{ end }}
+      </a>
+    </div>
+
+    <div class="article-header">
+      <div class="article-date">{{ .Date.Format "2 January 2006" }}</div>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p style="font-size:1.1rem; color:var(--c-text-mid); margin-top:0.5rem;">{{ . }}</p>{{ end }}
+    </div>
+
+    {{ with .Params.image }}
+    <img src="{{ . }}" alt="{{ $.Title }}" class="article-featured-img">
+    {{ end }}
+
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+
+{{ end }}

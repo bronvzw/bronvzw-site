@@ -1,0 +1,100 @@
+{{ $lang := .Language.Lang }}
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <a href="{{ if eq $lang "nl" }}/{{ else }}/fr/{{ end }}" class="footer-logo">
+          <img src="/images/logo.png" alt="Bron vzw" class="footer-logo-img"
+               onerror="this.style.display='none'">
+          <span class="footer-logo-text">Bron vzw</span>
+        </a>
+        <p>
+          {{ if eq $lang "nl" }}
+            Bron vzw ondersteunt verkrachte en verstoten vrouwen van Walungu (Oost-Congo) en hun kinderen die geboren zijn uit verkrachting — door hen waardigheid, vaardigheden en onderwijs te bieden.
+          {{ else }}
+            Bron asbl soutient les femmes violées et rejetées de Walungu (Est-Congo) et leurs enfants nés du viol — en leur offrant dignité, compétences et éducation.
+          {{ end }}
+        </p>
+      </div>
+
+      <!-- Navigation column -->
+      <div>
+        <h4>{{ if eq $lang "nl" }}Navigatie{{ else }}Navigation{{ end }}</h4>
+        <ul class="footer-links">
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <!-- Contact column -->
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-contact-row">
+          <span class="footer-contact-icon">📍</span>
+          <span>{{ .Site.Params.address }}, Belgium</span>
+        </div>
+        <div class="footer-contact-row">
+          <span class="footer-contact-icon">📞</span>
+          <span><a href="tel:{{ .Site.Params.phone }}" style="color:inherit">{{ .Site.Params.phone }}</a></span>
+        </div>
+        <div class="footer-contact-row">
+          <span class="footer-contact-icon">✉️</span>
+          <span><a href="mailto:{{ .Site.Params.email }}" style="color:inherit">{{ .Site.Params.email }}</a></span>
+        </div>
+      </div>
+
+      <!-- Donate column -->
+      <div>
+        <h4>{{ if eq $lang "nl" }}Bankgegevens{{ else }}Coordonnées bancaires{{ end }}</h4>
+        <p style="font-size:0.85rem;">
+          {{ if eq $lang "nl" }}
+            Stortingen rechtstreeks aan Bron vzw:
+          {{ else }}
+            Versements directement à Bron asbl :
+          {{ end }}
+        </p>
+        <div class="footer-bank">
+          <div class="footer-bank-row">
+            <span class="footer-bank-lbl">IBAN</span>
+            <span class="footer-bank-val">{{ .Site.Params.iban }}</span>
+          </div>
+          <div class="footer-bank-row">
+            <span class="footer-bank-lbl">BIC</span>
+            <span class="footer-bank-val">{{ .Site.Params.bic }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <span>© {{ now.Year }} Bron vzw — {{ if eq $lang "nl" }}vzwbron.be{{ else }}vzwbron.be{{ end }}</span>
+      <span>
+        {{ if eq $lang "nl" }}
+          <a href="/fr/" style="color:inherit;opacity:0.7">Français</a>
+        {{ else }}
+          <a href="/" style="color:inherit;opacity:0.7">Nederlands</a>
+        {{ end }}
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Netlify Identity redirect after login
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>

@@ -1,0 +1,92 @@
+# Decap CMS (formerly Netlify CMS) configuration
+# Access at: vzwbron.be/admin
+# Requires Netlify Identity + Git Gateway enabled in Netlify dashboard
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are stored (in the Hugo static folder)
+media_folder: "static/images/nieuws"
+public_folder: "/images/nieuws"
+
+# Use the Netlify CMS interface in Dutch
+locale: nl
+
+# Show a preview pane in the editor
+show_preview_links: true
+
+collections:
+  # ─── DUTCH NEWS ───────────────────────────────────────────
+  - name: "nieuws"
+    label: "Nieuws (NL)"
+    label_singular: "Nieuwsbericht (NL)"
+    folder: "content/nl/nieuws"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Titel"
+        name: "title"
+        widget: "string"
+        hint: "De titel van het nieuwsbericht"
+      - label: "Datum"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+        hint: "Datum van het nieuwsbericht"
+      - label: "Korte omschrijving"
+        name: "description"
+        widget: "text"
+        required: false
+        hint: "Een korte samenvatting (1-2 zinnen) die in de nieuwskaart wordt getoond"
+      - label: "Afbeelding"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Optionele afbeelding bij het bericht (aanbevolen: breedte min. 800px)"
+      - label: "Inhoud"
+        name: "body"
+        widget: "markdown"
+        hint: "De volledige tekst van het nieuwsbericht"
+
+  # ─── FRENCH NEWS ──────────────────────────────────────────
+  - name: "nouvelles"
+    label: "Nouvelles (FR)"
+    label_singular: "Article (FR)"
+    folder: "content/fr/nouvelles"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Titre"
+        name: "title"
+        widget: "string"
+        hint: "Le titre de l'article"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+        hint: "Date de l'article"
+      - label: "Courte description"
+        name: "description"
+        widget: "text"
+        required: false
+        hint: "Un bref résumé (1-2 phrases) affiché sur la carte de nouvelle"
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Image facultative pour l'article (recommandé : largeur min. 800px)"
+      - label: "Contenu"
+        name: "body"
+        widget: "markdown"
+        hint: "Le texte complet de l'article"

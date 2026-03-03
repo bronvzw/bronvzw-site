@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  {{- if .IsHome -}}
+    {{ .Site.Title }}
+    {{- if eq .Language.Lang "nl" }} — Ondersteuning voor vrouwen en kinderen in Congo
+    {{- else }} — Soutien aux femmes et enfants au Congo
+    {{- end }}
+  {{- else -}}
+    {{ .Title }} — {{ .Site.Title }}
+  {{- end -}}
+</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="theme-color" content="#4A7C5F">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ .Title }} — {{ .Site.Title }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+
+<!-- Canonical -->
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Alternate language -->
+{{ range .Translations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{ end }}
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+{{ $css := resources.Get "css/main.css" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/images/logo.png">
+
+<!-- Netlify Identity (for CMS admin) -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

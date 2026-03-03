@@ -1,0 +1,244 @@
+{{ $nl := eq .Language.Lang "nl" }}
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    {{ if $nl }}
+    <span class="tag">Bron vzw</span>
+    <h1>Wat doen we?</h1>
+    <p class="page-hero-lead">
+      Bron vzw zet zich in voor vrouwen en kinderen in Walungu (Congo) én
+      voor immigrantenvrouwen in België.
+    </p>
+    {{ else }}
+    <span class="tag">Bron asbl</span>
+    <h1>Que faisons-nous&nbsp;?</h1>
+    <p class="page-hero-lead">
+      Bron asbl s'engage pour les femmes et les enfants à Walungu (Congo)
+      et pour les femmes immigrantes en Belgique.
+    </p>
+    {{ end }}
+  </div>
+</div>
+
+<!-- OBJECTIVES -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-2xl); align-items:start;">
+      <div>
+        {{ if $nl }}
+        <span class="tag">Doelstellingen</span>
+        <h2>Wat we beogen</h2>
+        <ol class="objectives-list">
+          <li><span class="obj-num">1</span>Vrouwen verwelkomen, luisteren en ondersteunen — in België en Congo.</li>
+          <li><span class="obj-num">2</span>Vrouwen informeren over hun rechten en administratieve procedures in België.</li>
+          <li><span class="obj-num">3</span>Hoop herstellen bij vrouwen die slachtoffer zijn van seksueel geweld en marginalisering.</li>
+          <li><span class="obj-num">4</span>Vrouwen opleiden in ondernemerschap voor financiële zelfstandigheid.</li>
+          <li><span class="obj-num">5</span>Kinderen geboren uit verkrachting een toekomst bieden via onderwijs en buitenschoolse activiteiten.</li>
+          <li><span class="obj-num">6</span>Vrouwen en kinderen helpen herintegreren in de samenleving.</li>
+          <li><span class="obj-num">7</span>Solidariteit en samenwerking bevorderen tussen vrouwen onderling.</li>
+        </ol>
+        {{ else }}
+        <span class="tag">Objectifs</span>
+        <h2>Ce que nous visons</h2>
+        <ol class="objectives-list">
+          <li><span class="obj-num">1</span>Accueillir, écouter et soutenir les femmes — en Belgique et au Congo.</li>
+          <li><span class="obj-num">2</span>Informer les femmes sur leurs droits et les démarches administratives en Belgique.</li>
+          <li><span class="obj-num">3</span>Redonner espoir aux femmes victimes de violences sexuelles et de marginalisation.</li>
+          <li><span class="obj-num">4</span>Former les femmes à l'entrepreneuriat pour leur autonomie financière.</li>
+          <li><span class="obj-num">5</span>Offrir un avenir aux enfants nés du viol par l'éducation et les activités parascolaires.</li>
+          <li><span class="obj-num">6</span>Aider les femmes et les enfants à se réintégrer dans la société.</li>
+          <li><span class="obj-num">7</span>Favoriser la solidarité et la coopération entre les femmes.</li>
+        </ol>
+        {{ end }}
+      </div>
+      <div>
+        <img src="/images/school-materials.jpg"
+             alt="{{ if $nl }}Uitdeling schoolmateriaal{{ else }}Distribution de matériel scolaire{{ end }}"
+             style="border-radius:var(--r-lg); width:100%; aspect-ratio:4/3; object-fit:cover; box-shadow:var(--sh-lg);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section section--pale">
+  <div class="container">
+    {{ if $nl }}
+    <span class="tag">Projecten</span>
+    <h2 class="section-title">Onze belangrijkste projecten</h2>
+    <p class="section-lead">We werken op twee terreinen: in Walungu (Congo) en in België.</p>
+    {{ else }}
+    <span class="tag">Projets</span>
+    <h2 class="section-title">Nos projets principaux</h2>
+    <p class="section-lead">Nous agissons sur deux terrains : à Walungu (Congo) et en Belgique.</p>
+    {{ end }}
+
+    <div class="projects-grid">
+
+      <!-- Project 1: Soap factory -->
+      <article class="project-card">
+        <img src="/images/meeting-center.jpg"
+             alt="{{ if $nl }}Ontmoetingsruimte en zeepfabriek{{ else }}Centre de rencontre et savonnerie{{ end }}"
+             class="project-card-img"
+             onerror="this.parentElement.querySelector('.project-card-img-placeholder').style.display='flex'; this.style.display='none'">
+        <div class="project-card-img-placeholder" style="display:none">🏗️</div>
+        <div class="project-body">
+          {{ if $nl }}
+          <h3>Zeepfabriek & Ontmoetingscentrum</h3>
+          <p>
+            We bouwen een artisanale zeepfabriek in Walungu — een ruimte voor ontmoeting,
+            opleiding en solidariteit voor de vrouwen en kinderen van de gemeenschap.
+          </p>
+          <ul class="project-list">
+            <li>Opleiding in ambachtelijke zeepproductie</li>
+            <li>Individuele en collectieve ontmoetingsruimte</li>
+            <li>Opleidings- en opvolgingscentrum voor kinderen</li>
+            <li>Meer dan 200.000 indirecte begunstigden in de regio</li>
+          </ul>
+          {{ else }}
+          <h3>Savonnerie & Centre de rencontre</h3>
+          <p>
+            Nous construisons une savonnerie artisanale à Walungu — un espace de rencontre,
+            de formation et de solidarité pour les femmes et les enfants de la communauté.
+          </p>
+          <ul class="project-list">
+            <li>Formation à la production artisanale de savon</li>
+            <li>Espace de rencontre individuel et collectif</li>
+            <li>Centre de formation et de suivi pour les enfants</li>
+            <li>Plus de 200 000 bénéficiaires indirects dans la région</li>
+          </ul>
+          {{ end }}
+        </div>
+      </article>
+
+      <!-- Project 2: School support -->
+      <article class="project-card">
+        <img src="/images/children-materials.jpg"
+             alt="{{ if $nl }}Schoolondersteuning kinderen{{ else }}Soutien scolaire aux enfants{{ end }}"
+             class="project-card-img"
+             onerror="this.parentElement.querySelector('.project-card-img-placeholder').style.display='flex'; this.style.display='none'">
+        <div class="project-card-img-placeholder" style="display:none">📚</div>
+        <div class="project-body">
+          {{ if $nl }}
+          <h3>Schoolondersteuning voor Kwetsbare Kinderen</h3>
+          <p>
+            We zorgen dat elk kind dat geboren is uit verkrachting of verweesd is,
+            naar school kan gaan en een eerlijke kans krijgt op een toekomst.
+          </p>
+          <ul class="project-list">
+            <li>Betaling van schoolgeld</li>
+            <li>Aankoop schoolmateriaal en uniformen</li>
+            <li>Ziekteverzekering en gezondheidszorg</li>
+            <li>Inschrijving in openbare scholen voor sociale integratie</li>
+            <li>Buitenschoolse activiteiten en zomerkampen</li>
+            <li>Warme maaltijden (rijst en bonen)</li>
+          </ul>
+          {{ else }}
+          <h3>Soutien scolaire pour les enfants vulnérables</h3>
+          <p>
+            Nous veillons à ce que chaque enfant né du viol ou orphelin puisse aller à
+            l'école et ait une chance équitable pour son avenir.
+          </p>
+          <ul class="project-list">
+            <li>Paiement des frais scolaires</li>
+            <li>Achat de matériel scolaire et d'uniformes</li>
+            <li>Assurance maladie et soins de santé</li>
+            <li>Inscription dans des écoles publiques pour l'intégration sociale</li>
+            <li>Activités parascolaires et colonies de vacances</li>
+            <li>Repas chauds (riz et haricots)</li>
+          </ul>
+          {{ end }}
+        </div>
+      </article>
+
+      <!-- Project 3: Mothers economic activities -->
+      <article class="project-card">
+        <img src="/images/materials-mothers.jpg"
+             alt="{{ if $nl }}Economische activiteiten moeders{{ else }}Activités économiques des mères{{ end }}"
+             class="project-card-img"
+             onerror="this.parentElement.querySelector('.project-card-img-placeholder').style.display='flex'; this.style.display='none'">
+        <div class="project-card-img-placeholder" style="display:none">🌱</div>
+        <div class="project-body">
+          {{ if $nl }}
+          <h3>Economische Empowerment van Vrouwen</h3>
+          <p>
+            We helpen moeders economisch onafhankelijk worden door hen te begeleiden
+            bij kleine ondernemingen en landbouwactiviteiten.
+          </p>
+          <ul class="project-list">
+            <li>Financiering van economische startactiviteiten (bv. varkenshouderij)</li>
+            <li>Innovatieve aardappelteelt en voedselzelfvoorzienendheid</li>
+            <li>Tuinontwikkeling bij het ontmoetingscentrum</li>
+            <li>Begeleiding en opvolging van projecten</li>
+          </ul>
+          {{ else }}
+          <h3>Autonomisation économique des femmes</h3>
+          <p>
+            Nous aidons les mères à devenir économiquement indépendantes en les
+            accompagnant dans de petites entreprises et des activités agricoles.
+          </p>
+          <ul class="project-list">
+            <li>Financement d'activités économiques de départ (ex. élevage de porcs)</li>
+            <li>Culture innovante de pommes de terre et autosuffisance alimentaire</li>
+            <li>Développement du jardin au centre de rencontre</li>
+            <li>Accompagnement et suivi des projets</li>
+          </ul>
+          {{ end }}
+        </div>
+      </article>
+
+      <!-- Project 4: Belgium -->
+      <article class="project-card">
+        <div class="project-card-img-placeholder">🇧🇪</div>
+        <div class="project-body">
+          {{ if $nl }}
+          <h3>Ondersteuning in België</h3>
+          <p>
+            Naast ons werk in Congo, verwelkomen we ook immigrantenvrouwen in België
+            en helpen we hen wegwijs in hun nieuwe land.
+          </p>
+          <ul class="project-list">
+            <li>Onthaal en begeleiding van immigrantenvrouwen</li>
+            <li>Informatie over administratieve procedures en rechten</li>
+            <li>Fondsenwerving en partnershipontwikkeling</li>
+            <li>Samenwerking met Belgische organisaties</li>
+          </ul>
+          {{ else }}
+          <h3>Soutien en Belgique</h3>
+          <p>
+            En plus de notre travail au Congo, nous accueillons également les femmes
+            immigrantes en Belgique et les aidons à s'orienter dans leur nouveau pays.
+          </p>
+          <ul class="project-list">
+            <li>Accueil et accompagnement des femmes immigrantes</li>
+            <li>Information sur les démarches administratives et les droits</li>
+            <li>Collecte de fonds et développement de partenariats</li>
+            <li>Collaboration avec des organisations belges</li>
+          </ul>
+          {{ end }}
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY STRIP -->
+<section class="section section--warm">
+  <div class="container text-center">
+    {{ if $nl }}
+    <span class="tag">Foto's uit het veld</span>
+    <h2 class="section-title">Beelden vanuit Walungu</h2>
+    {{ else }}
+    <span class="tag">Photos de terrain</span>
+    <h2 class="section-title">Images de Walungu</h2>
+    {{ end }}
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0.75rem; margin-top:var(--sp-lg);">
+      <img src="/images/children-eating.jpg" alt="" style="border-radius:var(--r-md); aspect-ratio:1; object-fit:cover; width:100%;">
+      <img src="/images/uniforms.jpg" alt="" style="border-radius:var(--r-md); aspect-ratio:1; object-fit:cover; width:100%;">
+      <img src="/images/materials-2025.jpg" alt="" style="border-radius:var(--r-md); aspect-ratio:1; object-fit:cover; width:100%;">
+      <img src="/images/furniture.jpg" alt="" style="border-radius:var(--r-md); aspect-ratio:1; object-fit:cover; width:100%;">
+    </div>
+  </div>
+</section>

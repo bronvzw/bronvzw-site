@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="page-hero">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-hero-lead">{{ . }}</p>{{ end }}
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}

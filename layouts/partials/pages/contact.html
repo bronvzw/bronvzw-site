@@ -1,0 +1,138 @@
+{{ $nl := eq .Language.Lang "nl" }}
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    {{ if $nl }}
+    <span class="tag">Contact</span>
+    <h1>Neem contact met ons op</h1>
+    <p class="page-hero-lead">
+      Heeft u vragen, wilt u meer weten of wilt u samenwerken?
+      Wij horen graag van u.
+    </p>
+    {{ else }}
+    <span class="tag">Contact</span>
+    <h1>Contactez-nous</h1>
+    <p class="page-hero-lead">
+      Vous avez des questions, souhaitez en savoir plus ou collaborer ?
+      Nous serions ravis de vous entendre.
+    </p>
+    {{ end }}
+  </div>
+</div>
+
+<!-- CONTACT FORM + INFO -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Form -->
+      <div>
+        {{ if $nl }}
+        <h2>Stuur ons een bericht</h2>
+        <p style="color:var(--c-text-mid); margin-bottom:1.5rem;">
+          Vul het formulier in en we nemen zo snel mogelijk contact met u op.
+        </p>
+        {{ else }}
+        <h2>Envoyez-nous un message</h2>
+        <p style="color:var(--c-text-mid); margin-bottom:1.5rem;">
+          Remplissez le formulaire et nous vous répondrons dans les meilleurs délais.
+        </p>
+        {{ end }}
+
+        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none">
+            <label>Don't fill this out: <input name="bot-field"></label>
+          </p>
+
+          <div class="form-group">
+            <label class="form-label" for="name">
+              {{ if $nl }}Naam{{ else }}Nom{{ end }}
+            </label>
+            <input type="text" id="name" name="name" class="form-input"
+                   placeholder="{{ if $nl }}Uw naam{{ else }}Votre nom{{ end }}"
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">E-mail</label>
+            <input type="email" id="email" name="email" class="form-input"
+                   placeholder="{{ if $nl }}uw@email.be{{ else }}votre@email.be{{ end }}"
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="subject">
+              {{ if $nl }}Onderwerp{{ else }}Sujet{{ end }}
+            </label>
+            <input type="text" id="subject" name="subject" class="form-input"
+                   placeholder="{{ if $nl }}Waarover wilt u contact?{{ else }}De quoi souhaitez-vous nous parler ?{{ end }}">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">
+              {{ if $nl }}Bericht{{ else }}Message{{ end }}
+            </label>
+            <textarea id="message" name="message" class="form-textarea"
+                      placeholder="{{ if $nl }}Uw bericht...{{ else }}Votre message...{{ end }}"
+                      required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            {{ if $nl }}Verstuur bericht{{ else }}Envoyer le message{{ end }}
+          </button>
+        </form>
+      </div>
+
+      <!-- Info -->
+      <div>
+        {{ if $nl }}
+        <h2>Onze gegevens</h2>
+        {{ else }}
+        <h2>Nos coordonnées</h2>
+        {{ end }}
+
+        <div class="contact-info-block" style="margin-top:1.5rem;">
+          <div class="contact-info-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-info-text">
+              <h4>{{ if $nl }}Adres{{ else }}Adresse{{ end }}</h4>
+              <p>{{ .Site.Params.address }}<br>Belgium</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-info-text">
+              <h4>{{ if $nl }}Telefoon{{ else }}Téléphone{{ end }}</h4>
+              <p><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-info-text">
+              <h4>E-mail</h4>
+              <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">🏦</div>
+            <div class="contact-info-text">
+              <h4>{{ if $nl }}Rekeningnummer{{ else }}Numéro de compte{{ end }}</h4>
+              <p style="font-family:monospace;">{{ .Site.Params.iban }}<br>BIC: {{ .Site.Params.bic }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div style="margin-top:2rem; background:var(--c-primary-pale); border-radius:var(--r-lg); padding:2rem; text-align:center;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🌍</div>
+          <p style="font-size:0.9rem; color:var(--c-text-mid); margin:0;">
+            {{ if $nl }}Wij zijn actief in België en in Walungu, Zuid-Kivu, Oost-Congo.{{ else }}Nous sommes actifs en Belgique et à Walungu, Sud-Kivu, Est-Congo.{{ end }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
