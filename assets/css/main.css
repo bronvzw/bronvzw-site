@@ -39,7 +39,7 @@
   --sp-2xl: 7rem;
 
   --max-w:    1200px;
-  --nav-h:    76px;
+  --nav-h:    84px;
 
   --r-sm: 4px;
   --r-md: 10px;
@@ -198,8 +198,8 @@ li { margin-bottom: 0.4rem; }
 .nav-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 100%;
+  gap: 2rem;
 }
 .nav-logo {
   display: flex;
@@ -220,13 +220,13 @@ li { margin-bottom: 0.4rem; }
   align-items: center;
   gap: 0.1rem;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 0;
 }
 .nav-links a {
-  padding: 0.45rem 0.7rem;
+  padding: 0.5rem 0.85rem;
   border-radius: var(--r-sm);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--c-text-mid);
   transition: var(--transition);
@@ -381,7 +381,7 @@ li { margin-bottom: 0.4rem; }
 
 /* --- Page Hero (inner pages) --- */
 .page-hero {
-  padding: calc(var(--nav-h) + var(--sp-xl)) 0 var(--sp-lg);
+  padding: calc(var(--nav-h) + var(--sp-lg)) 0 var(--sp-lg);
   background: linear-gradient(160deg, var(--c-primary-pale) 0%, var(--c-bg) 70%);
 }
 .page-hero .tag { margin-bottom: 0.5rem; }
@@ -576,7 +576,7 @@ li { margin-bottom: 0.4rem; }
 .news-card .btn { align-self: flex-start; }
 
 /* --- Full news list page --- */
-.news-list-header { padding: calc(var(--nav-h) + var(--sp-xl)) 0 var(--sp-lg); background: var(--c-primary-pale); }
+.news-list-header { padding: calc(var(--nav-h) + var(--sp-lg)) 0 var(--sp-lg); background: var(--c-primary-pale); }
 .news-list-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
