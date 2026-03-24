@@ -2,7 +2,7 @@
 title: "Bezoek aan Walungu — Januari 2023"
 date: 2023-01-28
 description: "Ontmoetingen met moeders en kinderen, én een bezoek aan het Algemeen Ziekenhuis van Walungu om verkrachte vrouwen vrij te krijgen."
-image: "/images/children-eating.jpg"
+image: "/images/nieuws/nieuws-jan-2023-ziekenhuis.jpg"
 ---
 
 In januari 2023 bracht het team van Bron vzw opnieuw een bezoek aan Walungu. Twee momenten sprongen er in het bijzonder uit.

@@ -2,7 +2,7 @@
 title: "Visite à Walungu — Janvier 2023"
 date: 2023-01-28
 description: "Rencontres avec les mères et les enfants, et visite à l'hôpital général de Walungu pour libérer des femmes violées retenues faute de paiement."
-image: "/images/children-eating.jpg"
+image: "/images/nieuws/nieuws-jan-2023-ziekenhuis.jpg"
 ---
 
 En janvier 2023, l'équipe de Bron asbl a effectué une nouvelle visite à Walungu. Deux moments se sont particulièrement démarqués.

@@ -2,7 +2,7 @@
 title: "Beat the Trail 2025 — 120 km pour Walungu"
 date: 2025-08-01
 description: "Lieven De Maeyer marche 120 km pour soutenir les revenus durables et la sécurité alimentaire des femmes de Walungu."
-image: "/images/materials-2025.jpg"
+image: "/images/nieuws/nieuws-beat-trail-2025.png"
 ---
 
 Les **3 et 4 octobre 2025**, Lieven De Maeyer fait un pas extraordinaire — au sens propre comme au sens figuré. Il marche les **120 km complets du Beat the Trail** pour collecter des fonds pour les projets agricoles de Bron asbl à Walungu.
