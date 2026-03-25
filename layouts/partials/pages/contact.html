@@ -40,7 +40,8 @@
         </p>
         {{ end }}
 
-        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"
+              action="{{ if $nl }}/bedankt/{{ else }}/fr/merci/{{ end }}">
           <input type="hidden" name="form-name" value="contact">
           <p style="display:none">
             <label>Don't fill this out: <input name="bot-field"></label>

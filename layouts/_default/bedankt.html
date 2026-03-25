@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ $nl := eq .Language.Lang "nl" }}
+<div class="page-hero">
+  <div class="container">
+    {{ if $nl }}
+    <span class="tag">Contact</span>
+    <h1>Bedankt voor uw bericht!</h1>
+    <p class="page-hero-lead">We hebben uw bericht goed ontvangen en nemen zo snel mogelijk contact met u op.</p>
+    {{ else }}
+    <span class="tag">Contact</span>
+    <h1>Merci pour votre message&nbsp;!</h1>
+    <p class="page-hero-lead">Nous avons bien reçu votre message et vous répondrons dans les meilleurs délais.</p>
+    {{ end }}
+  </div>
+</div>
+
+<section class="section">
+  <div class="container" style="text-align:center; max-width:600px; margin:0 auto;">
+    <div style="font-size:3.5rem; margin-bottom:1.5rem;">✉️</div>
+    {{ if $nl }}
+    <p style="font-size:1.1rem; color:var(--c-text-mid); margin-bottom:2rem;">
+      Uw bericht is verstuurd naar het team van Bron vzw. We doen ons best om binnen de 2–3 werkdagen te antwoorden.
+    </p>
+    <a href="/" class="btn btn-primary">Terug naar de homepage</a>
+    {{ else }}
+    <p style="font-size:1.1rem; color:var(--c-text-mid); margin-bottom:2rem;">
+      Votre message a été envoyé à l'équipe de Bron asbl. Nous ferons de notre mieux pour vous répondre dans les 2–3 jours ouvrables.
+    </p>
+    <a href="/fr/" class="btn btn-primary">Retour à l'accueil</a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
