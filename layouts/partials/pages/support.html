@@ -92,6 +92,14 @@
     <h2 class="section-title">Comment faire un don</h2>
     {{ end }}
 
+    <div class="donate-notice">
+      {{ if $nl }}
+      <p><strong>Gelieve ons te contacteren indien u een fiscaal attest wenst te ontvangen</strong> (en dus tijdelijk niet via &ldquo;Kontinenten&rdquo; te storten).</p>
+      {{ else }}
+      <p><strong>Veuillez nous contacter si vous souhaitez obtenir une attestation fiscale</strong> (ne passez pas par &laquo;&nbsp;Kontinenten&nbsp;&raquo; momentanément).</p>
+      {{ end }}
+    </div>
+
     <div class="donate-grid">
 
       <!-- Option 1: Tax deductible -->

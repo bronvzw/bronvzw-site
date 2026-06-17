@@ -716,6 +716,17 @@ li { margin-bottom: 0.4rem; }
 /* ============================================================
    STEUNEN / SOUTENIR
    ============================================================ */
+.donate-notice {
+  background: var(--c-secondary-pale);
+  border-left: 4px solid var(--c-secondary);
+  border-radius: var(--r-md);
+  padding: 1rem 1.25rem;
+  margin-bottom: var(--sp-md);
+}
+.donate-notice p {
+  margin: 0;
+  color: var(--c-text);
+}
 .donate-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
