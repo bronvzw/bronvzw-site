@@ -16,8 +16,10 @@
       <ul class="nav-links" role="list">
         {{ range .Site.Menus.main }}
         <li>
+          {{ $isHome := or (eq .URL "/") (eq .URL "/fr/") }}
+          {{ $active := cond $isHome (eq $currentURL .URL) (hasPrefix $currentURL .URL) }}
           <a href="{{ .URL }}"
-             {{ if eq $currentURL .URL }}class="active" aria-current="page"{{ end }}>
+             {{ if $active }}class="active"{{ if eq $currentURL .URL }} aria-current="page"{{ end }}{{ end }}>
             {{ .Name }}
           </a>
         </li>
@@ -32,13 +34,13 @@
             <span class="lang-active" title="Nederlands">NL</span>
             <span class="nav-lang-sep">|</span>
             {{ if .Translations }}
-              <a href="{{ (index .Translations 0).Permalink }}" title="Français">FR</a>
+              <a href="{{ (index .Translations 0).RelPermalink }}" title="Français" lang="fr">FR</a>
             {{ else }}
               <a href="/fr/" title="Français">FR</a>
             {{ end }}
           {{ else }}
             {{ if .Translations }}
-              <a href="{{ (index .Translations 0).Permalink }}" title="Nederlands">NL</a>
+              <a href="{{ (index .Translations 0).RelPermalink }}" title="Nederlands" lang="nl">NL</a>
             {{ else }}
               <a href="/" title="Nederlands">NL</a>
             {{ end }}

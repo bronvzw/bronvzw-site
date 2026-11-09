@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Beheer — Bron vzw</title>
   <style>
     body { font-family: -apple-system, sans-serif; background: #FAFAF7; }
@@ -11,7 +12,13 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Decap CMS (formerly Netlify CMS) -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Decap CMS (formerly Netlify CMS).
+       Version is pinned and integrity-checked so a compromised or broken CDN release
+       can never run on the admin page. To upgrade: change the version, then recompute
+       the hash with:
+       curl -sL https://unpkg.com/decap-cms@VERSION/dist/decap-cms.js | openssl dgst -sha384 -binary | openssl base64 -A -->
+  <script src="https://unpkg.com/decap-cms@3.17.3/dist/decap-cms.js"
+          integrity="sha384-RWRzuHfiZSWCt3nEvG7B0v3cMgM1C2UuJmgBSL92GQh4uXmNSkbcthql/mNBqvjr"
+          crossorigin="anonymous"></script>
 </body>
 </html>

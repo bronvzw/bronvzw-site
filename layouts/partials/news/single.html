@@ -1,0 +1,35 @@
+{{ $nl := eq .Language.Lang "nl" }}
+
+<div class="article-wrap">
+  <div class="container">
+    <div class="article-back">
+      <a href="{{ if $nl }}/nieuws/{{ else }}/fr/nouvelles/{{ end }}">
+        ← {{ if $nl }}Terug naar nieuws{{ else }}Retour aux nouvelles{{ end }}
+      </a>
+    </div>
+
+    <div class="article-header">
+      <time class="article-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="article-lead">{{ . }}</p>{{ end }}
+    </div>
+
+    {{ with .Params.image }}
+    <img src="{{ . }}" alt="{{ $.Title }}" class="article-featured-img">
+    {{ end }}
+
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+
+    {{ with .Params.gallery }}
+    <div class="article-gallery">
+      {{ range $i, $src := . }}
+      <a href="{{ $src }}" class="article-gallery-item" target="_blank" rel="noopener">
+        <img src="{{ $src }}" alt="{{ $.Title }} — {{ if $nl }}foto{{ else }}photo{{ end }} {{ add $i 1 }}" loading="lazy">
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>

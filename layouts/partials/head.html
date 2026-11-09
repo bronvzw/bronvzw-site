@@ -16,15 +16,17 @@
 <!-- Open Graph -->
 <meta property="og:title" content="{{ .Title }} — {{ .Site.Title }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{{ if and .IsPage (in (slice "nieuws" "nouvelles") .Section) }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+<meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/mothers-children.jpg" | absURL }}{{ end }}">
+<meta property="og:locale" content="{{ if eq .Language.Lang "nl" }}nl_BE{{ else }}fr_BE{{ end }}">
+<meta name="twitter:card" content="summary_large_image">
 
 <!-- Canonical -->
 <link rel="canonical" href="{{ .Permalink }}">
 
 <!-- Alternate language -->
-{{ range .Translations }}
+{{ range .AllTranslations }}
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
 {{ end }}
 
@@ -40,5 +42,7 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/images/logo.png">
 
-<!-- Netlify Identity (for CMS admin) -->
+{{ if .IsHome }}
+<!-- Netlify Identity: only needed on the homepage, where CMS invite / password-reset links land -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{{ end }}

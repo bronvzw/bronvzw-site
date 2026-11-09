@@ -27,7 +27,7 @@ Giften via Kontinenten vzw (IBAN: BE66 7380 3734 7143, BIC: KREDBEBB) zijn fisca
 
 ## Waarom dit belangrijk is
 
-In Walungu zijn honderden vrouwen slachtoffer geworden van seksueel geweld en worden zij samen met hun kinderen uitgesloten door de gemeenschap. Bron vzw werkt al jaren aan hun herintegration — via onderwijs voor de kinderen en economische empowerment voor de moeders.
+In Walungu zijn honderden vrouwen slachtoffer geworden van seksueel geweld en worden zij samen met hun kinderen uitgesloten door de gemeenschap. Bron vzw werkt al jaren aan hun herintegratie — via onderwijs voor de kinderen en economische empowerment voor de moeders.
 
 Elke stap van Lieven, en elke euro die u bijdraagt, helpt deze vrouwen en kinderen een betere toekomst op te bouwen.
 

@@ -86,6 +86,7 @@
   </div>
 </footer>
 
+{{ if .IsHome }}
 <script>
   // Netlify Identity redirect after login
   if (window.netlifyIdentity) {
@@ -98,3 +99,4 @@
     });
   }
 </script>
+{{ end }}

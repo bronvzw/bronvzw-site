@@ -258,12 +258,12 @@
       {{ range $recentPosts }}
       <article class="news-card">
         {{ if .Params.image }}
-        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="news-card-img"
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="news-card-img" loading="lazy"
              onerror="this.parentElement.querySelector('.news-card-img-placeholder').style.display='flex'; this.style.display='none'">
         {{ end }}
         <div class="news-card-img-placeholder" {{ if .Params.image }}style="display:none"{{ end }}>📰</div>
         <div class="news-card-body">
-          <div class="news-card-date">{{ .Date.Format "2 Jan 2006" }}</div>
+          <time class="news-card-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
           <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
           <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
           <a href="{{ .Permalink }}" class="btn btn-outline btn-sm">

@@ -49,6 +49,12 @@ collections:
         widget: "image"
         required: false
         hint: "Optionele afbeelding bij het bericht (aanbevolen: breedte min. 800px)"
+      - label: "Extra foto's (galerij)"
+        name: "gallery"
+        widget: "list"
+        required: false
+        field: { label: "Foto", name: "image", widget: "image" }
+        hint: "Optioneel: extra foto's die onderaan het bericht als galerij getoond worden"
       - label: "Inhoud"
         name: "body"
         widget: "markdown"
@@ -86,6 +92,12 @@ collections:
         widget: "image"
         required: false
         hint: "Image facultative pour l'article (recommandé : largeur min. 800px)"
+      - label: "Photos supplémentaires (galerie)"
+        name: "gallery"
+        widget: "list"
+        required: false
+        field: { label: "Photo", name: "image", widget: "image" }
+        hint: "Facultatif : photos supplémentaires affichées en galerie en bas de l'article"
       - label: "Contenu"
         name: "body"
         widget: "markdown"
